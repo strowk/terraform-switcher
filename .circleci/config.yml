@@ -1,16 +1,23 @@
 version: 2
 jobs:
   test_snap_build:
-    machine:
-      image: ubuntu-2004:202101-01
+    docker:
+      - image: cibuilds/snapcraft:stable
     steps:
       - checkout
       - run:
-          command: |
-            echo "Installing snapd, git..."
-            sudo apt update && sudo apt install -y snapd git
-            echo "Installing snapcraft..."
-            docker run -v $(pwd):$(pwd) -t ubuntu:xenial sh -c "apt update -qq && apt install snapcraft -y && cd $(pwd) && snapcraft"
+          command: | 
+            snapcraft
+            tfswitch --version
+            tfswitch -b ~/.bin --latest
+    
+#       - checkout
+#       - run:
+#           command: |
+#             echo "Installing snapd, git..."
+#             sudo apt update && sudo apt install -y snapd git
+#             echo "Installing snapcraft..."
+#             docker run -v $(pwd):$(pwd) -t ubuntu:xenial sh -c "apt update -qq && apt install snapcraft -y && cd $(pwd) && snapcraft"
             
 #           sudo apt install snapcraft
 #           sudo snap install multipass --classic
