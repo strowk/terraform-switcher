@@ -11,8 +11,9 @@ jobs:
             sudo apt update && sudo apt install -y snapd git
             echo "Installing snapcraft..."
             sudo apt install snapcraft
+            sudo snap install multipass --classic
             echo "Building and installing tfswitch..."
-            echo y | snapcraft
+            snapcraft
             tfswitch --version
             tfswitch -b ~/.bin --latest
 
