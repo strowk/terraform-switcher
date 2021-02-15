@@ -7,6 +7,7 @@ jobs:
       - run:
           command: | 
             sudo snap install tfswitch
+            ls /usr/local/bin
             tfswitch --version
             tfswitch -b ~/.bin --latest
 
