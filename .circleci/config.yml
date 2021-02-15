@@ -6,10 +6,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: | 
-            snapcraft
-            tfswitch --version
-            tfswitch -b ~/.bin --latest
+          command: snapcraft
     
 #       - checkout
 #       - run:
