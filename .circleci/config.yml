@@ -9,7 +9,7 @@ jobs:
           command: |
             sudo apt update && sudo apt install -y snapd
             apt install snapcraft git
-            snapcraft
+            sudo snapcraft
             tfswitch --version
             tfswitch -b ~/.bin --latest
 
