@@ -8,8 +8,8 @@ jobs:
       - run:
           command: |
             sudo apt update && sudo apt install -y snapd
-            apt install snapcraft git
-            sudo snapcraft
+            sudo apt install snapcraft git
+            snapcraft
             tfswitch --version
             tfswitch -b ~/.bin --latest
 
