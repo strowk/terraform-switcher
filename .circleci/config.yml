@@ -7,8 +7,11 @@ jobs:
       - checkout
       - run:
           command: |
+            echo "Installing snapd, git..."
             sudo apt update && sudo apt install -y snapd git
-            echo yes | sudo apt install snapcraft
+            echo "Installing snapcraft..."
+            echo N | sudo apt install snapcraft
+            echo "Building and installing tfswitch..."
             snapcraft
             tfswitch --version
             tfswitch -b ~/.bin --latest
