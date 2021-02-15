@@ -10,9 +10,9 @@ jobs:
             echo "Installing snapd, git..."
             sudo apt update && sudo apt install -y snapd git
             echo "Installing snapcraft..."
-            echo N | sudo apt install snapcraft
+            sudo apt install snapcraft
             echo "Building and installing tfswitch..."
-            snapcraft
+            echo y | snapcraft
             tfswitch --version
             tfswitch -b ~/.bin --latest
 
