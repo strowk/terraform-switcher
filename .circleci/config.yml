@@ -9,7 +9,7 @@ jobs:
     steps:
       - run:
           command: | 
-            snap install tfswitch
+            sudo snap install tfswitch
             tfswtich --version
             tfswtich --latest
 #   build:
