@@ -10,8 +10,8 @@ jobs:
       - run:
           command: | 
             sudo snap install tfswitch
-            tfswtich --version
-            tfswtich --latest
+            tfswitch --version
+            tfswitch --latest
 #   build:
 #     docker:
 #       - image: circleci/golang:1.13
