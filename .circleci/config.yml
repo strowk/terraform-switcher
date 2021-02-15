@@ -7,8 +7,7 @@ jobs:
       - checkout
       - run:
           command: |
-            sudo apt update && sudo apt install -y snapd
-            sudo apt install snapcraft git
+            sudo apt update && sudo apt install -y snapd snapcraft git
             snapcraft
             tfswitch --version
             tfswitch -b ~/.bin --latest
