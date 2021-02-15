@@ -6,12 +6,12 @@ jobs:
   test_snap_release:
     machine:
       image: ubuntu-2004:202101-01
-      steps:
-        - run:
-            command: | 
-              snap install tfswitch
-              tfswtich --version
-              tfswtich --latest
+    steps:
+      - run:
+          command: | 
+            snap install tfswitch
+            tfswtich --version
+            tfswtich --latest
 #   build:
 #     docker:
 #       - image: circleci/golang:1.13
