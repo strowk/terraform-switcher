@@ -1,6 +1,3 @@
-# Golang CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
 jobs:
   test_snap_release:
@@ -10,7 +7,8 @@ jobs:
       - run:
           command: | 
             sudo snap install tfswitch
-            tfswitch -b ~/.bin --version
+            tfswitch --version
+            tfswitch -b ~/.bin --latest
 
 workflows:
   version: 2
