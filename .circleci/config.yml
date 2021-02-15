@@ -6,7 +6,10 @@ jobs:
     steps:
       - checkout
       - run:
-          command: snapcraft
+          command: |
+            apt-get update
+            snapcraft
+            
     
 #       - checkout
 #       - run:
